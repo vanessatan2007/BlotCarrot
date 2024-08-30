@@ -15,5 +15,12 @@ const leaves = bt.catmullRom([[75, tall], [bt.randIntInRange(47,52), tall+bt.ran
 drawLines([carrot])
 drawLines([leaves])
 
-
+//lines
+const lines = bt.randIntInRange(8, 20);
+for (let i = 0;i<lines;i++) { 
+  const startx = bt.randIntInRange(65,80);
+  const starty = bt.randIntInRange(35, tall-10);
+  const line =  bt.catmullRom([[startx, starty], [startx+ bt.randIntInRange(5,10),starty]])
+  drawLines([line])
+}
 
